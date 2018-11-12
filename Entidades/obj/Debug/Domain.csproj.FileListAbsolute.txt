@@ -1,0 +1,12 @@
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\Entidades.dll
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\EntityFramework.dll
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\EntityFramework.xml
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\obj\Debug\Entidades.dll
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\obj\Debug\Entidades.pdb

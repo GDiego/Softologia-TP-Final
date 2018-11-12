@@ -9,7 +9,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using CapaDataAccess.Context;
-using Entidades;
+using Domain;
 using Softologia.Capacitacion.TPFinalv1._0.Models;
 
 namespace Softologia.Capacitacion.TPFinalv1._0.Controllers

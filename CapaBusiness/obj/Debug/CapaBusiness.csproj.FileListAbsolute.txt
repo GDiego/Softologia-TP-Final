@@ -66,3 +66,17 @@ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\CapaBusiness\obj\
 C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\CapaBusiness\bin\Debug\Entidades.dll
 C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\CapaBusiness\bin\Debug\Entidades.pdb
 C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\CapaBusiness\bin\Debug\Entidades.dll.config
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\CapaBusiness.dll
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\CapaBusiness.pdb
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\CapaDataAccess.dll
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\Entidades.dll
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\CapaDataAccess.pdb
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\CapaDataAccess.dll.config
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\Entidades.pdb
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\Entidades.dll.config
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\EntityFramework.xml
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\obj\Debug\CapaBusiness.csprojAssemblyReference.cache
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\obj\Debug\CapaBusiness.csproj.CoreCompileInputs.cache
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\obj\Debug\CapaBusiness.csproj.CopyComplete
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\obj\Debug\CapaBusiness.dll
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\obj\Debug\CapaBusiness.pdb

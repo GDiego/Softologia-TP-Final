@@ -1,5 +1,5 @@
 ﻿using CapaDataAccess.Context;
-using Entidades;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;

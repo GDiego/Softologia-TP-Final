@@ -4,7 +4,7 @@ namespace CapaDataAccess.Context
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
-    using Entidades;
+    using Domain;
 
     public partial class AplicacionDBContext : DbContext
     {

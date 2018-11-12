@@ -1,0 +1,810 @@
+[1mdiff --git a/.vs/Softologia.Capacitacion.TPFinalv1.0/v15/.suo b/.vs/Softologia.Capacitacion.TPFinalv1.0/v15/.suo[m
+[1mindex a7ca9db..defd9d7 100644[m
+Binary files a/.vs/Softologia.Capacitacion.TPFinalv1.0/v15/.suo and b/.vs/Softologia.Capacitacion.TPFinalv1.0/v15/.suo differ
+[1mdiff --git a/.vs/Softologia.Capacitacion.TPFinalv1.0/v15/Server/sqlite3/storage.ide-shm b/.vs/Softologia.Capacitacion.TPFinalv1.0/v15/Server/sqlite3/storage.ide-shm[m
+[1mindex cb608d1..7c0e5aa 100644[m
+Binary files a/.vs/Softologia.Capacitacion.TPFinalv1.0/v15/Server/sqlite3/storage.ide-shm and b/.vs/Softologia.Capacitacion.TPFinalv1.0/v15/Server/sqlite3/storage.ide-shm differ
+[1mdiff --git a/.vs/Softologia.Capacitacion.TPFinalv1.0/v15/Server/sqlite3/storage.ide-wal b/.vs/Softologia.Capacitacion.TPFinalv1.0/v15/Server/sqlite3/storage.ide-wal[m
+[1mindex 4d17c38..9a144ca 100644[m
+Binary files a/.vs/Softologia.Capacitacion.TPFinalv1.0/v15/Server/sqlite3/storage.ide-wal and b/.vs/Softologia.Capacitacion.TPFinalv1.0/v15/Server/sqlite3/storage.ide-wal differ
+[1mdiff --git a/.vs/config/applicationhost.config b/.vs/config/applicationhost.config[m
+[1mindex 7d40780..8ae98ce 100644[m
+[1m--- a/.vs/config/applicationhost.config[m
+[1m+++ b/.vs/config/applicationhost.config[m
+[36m@@ -162,7 +162,7 @@[m
+             </site>[m
+             <site name="Softologia.Capacitacion.TP2v1.0" id="2">[m
+                 <application path="/" applicationPool="Clr4IntegratedAppPool">[m
+[31m-                    <virtualDirectory path="/" physicalPath="C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\Softologia.Capacitacion.TPFinalv1.0" />[m
+[32m+[m[32m                    <virtualDirectory path="/" physicalPath="C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0" />[m
+                 </application>[m
+                 <bindings>[m
+                     <binding protocol="http" bindingInformation="*:9828:localhost" />[m
+[1mdiff --git a/CapaBusiness/CapaBusiness.csproj b/CapaBusiness/CapaBusiness.csproj[m
+[1mindex ef05674..2ec5289 100644[m
+[1m--- a/CapaBusiness/CapaBusiness.csproj[m
+[1m+++ b/CapaBusiness/CapaBusiness.csproj[m
+[36m@@ -52,9 +52,9 @@[m
+       <Project>{818a0df5-19af-4dbb-810a-614d454eb320}</Project>[m
+       <Name>CapaDataAccess</Name>[m
+     </ProjectReference>[m
+[31m-    <ProjectReference Include="..\Entidades\Entidades.csproj">[m
+[32m+[m[32m    <ProjectReference Include="..\Entidades\Domain.csproj">[m
+       <Project>{BD0B60DB-B777-4938-8A9D-BCB9CFB604F7}</Project>[m
+[31m-      <Name>Entidades</Name>[m
+[32m+[m[32m      <Name>Domain</Name>[m
+     </ProjectReference>[m
+   </ItemGroup>[m
+   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />[m
+[1mdiff --git a/CapaBusiness/InvoiceBusiness.cs b/CapaBusiness/InvoiceBusiness.cs[m
+[1mindex 6013a17..ea1583d 100644[m
+[1m--- a/CapaBusiness/InvoiceBusiness.cs[m
+[1m+++ b/CapaBusiness/InvoiceBusiness.cs[m
+[36m@@ -1,7 +1,7 @@[m
+ ﻿using CapaDataAccess.Context;[m
+ using CapaDataAccess.Contracts;[m
+ using CapaDataAccess.Implementations;[m
+[31m-using Entidades;[m
+[32m+[m[32musing Domain;[m
+ using System;[m
+ using System.Collections.Generic;[m
+ using System.Linq;[m
+[1mdiff --git a/CapaBusiness/InvoiceDetailBusiness.cs b/CapaBusiness/InvoiceDetailBusiness.cs[m
+[1mindex d65f10c..58f9860 100644[m
+[1m--- a/CapaBusiness/InvoiceDetailBusiness.cs[m
+[1m+++ b/CapaBusiness/InvoiceDetailBusiness.cs[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-﻿using Entidades;[m
+[32m+[m[32m﻿using Domain;[m
+ using System;[m
+ using System.Collections.Generic;[m
+ using System.Linq;[m
+[1mdiff --git a/CapaBusiness/ProductBusiness.cs b/CapaBusiness/ProductBusiness.cs[m
+[1mindex 357da4d..ca4480c 100644[m
+[1m--- a/CapaBusiness/ProductBusiness.cs[m
+[1m+++ b/CapaBusiness/ProductBusiness.cs[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-﻿using Entidades;[m
+[32m+[m[32m﻿using Domain;[m
+ using System;[m
+ using System.Collections.Generic;[m
+ using System.Linq;[m
+[1mdiff --git a/CapaBusiness/bin/Debug/CapaBusiness.dll b/CapaBusiness/bin/Debug/CapaBusiness.dll[m
+[1mindex 8514b89..86badd6 100644[m
+Binary files a/CapaBusiness/bin/Debug/CapaBusiness.dll and b/CapaBusiness/bin/Debug/CapaBusiness.dll differ
+[1mdiff --git a/CapaBusiness/bin/Debug/CapaBusiness.pdb b/CapaBusiness/bin/Debug/CapaBusiness.pdb[m
+[1mindex f722d88..2e1864e 100644[m
+Binary files a/CapaBusiness/bin/Debug/CapaBusiness.pdb and b/CapaBusiness/bin/Debug/CapaBusiness.pdb differ
+[1mdiff --git a/CapaBusiness/bin/Debug/CapaDataAccess.dll b/CapaBusiness/bin/Debug/CapaDataAccess.dll[m
+[1mindex 9ae202b..42ca049 100644[m
+Binary files a/CapaBusiness/bin/Debug/CapaDataAccess.dll and b/CapaBusiness/bin/Debug/CapaDataAccess.dll differ
+[1mdiff --git a/CapaBusiness/bin/Debug/CapaDataAccess.pdb b/CapaBusiness/bin/Debug/CapaDataAccess.pdb[m
+[1mindex 69dcc61..516768c 100644[m
+Binary files a/CapaBusiness/bin/Debug/CapaDataAccess.pdb and b/CapaBusiness/bin/Debug/CapaDataAccess.pdb differ
+[1mdiff --git a/CapaBusiness/bin/Debug/Entidades.dll b/CapaBusiness/bin/Debug/Entidades.dll[m
+[1mindex dfa48f5..95d49a8 100644[m
+Binary files a/CapaBusiness/bin/Debug/Entidades.dll and b/CapaBusiness/bin/Debug/Entidades.dll differ
+[1mdiff --git a/CapaBusiness/bin/Debug/Entidades.pdb b/CapaBusiness/bin/Debug/Entidades.pdb[m
+[1mindex 0a93fa3..89cb7fb 100644[m
+Binary files a/CapaBusiness/bin/Debug/Entidades.pdb and b/CapaBusiness/bin/Debug/Entidades.pdb differ
+[1mdiff --git a/CapaBusiness/obj/Debug/CapaBusiness.csproj.CoreCompileInputs.cache b/CapaBusiness/obj/Debug/CapaBusiness.csproj.CoreCompileInputs.cache[m
+[1mindex b2c4fd8..37e6350 100644[m
+[1m--- a/CapaBusiness/obj/Debug/CapaBusiness.csproj.CoreCompileInputs.cache[m
+[1m+++ b/CapaBusiness/obj/Debug/CapaBusiness.csproj.CoreCompileInputs.cache[m
+[36m@@ -1 +1 @@[m
+[31m-f41ca17751710468a3d682f0e5f13d69e5b1f97f[m
+[32m+[m[32m288faa1367f954d78ae4313d90d6ed216cec5d94[m
+[1mdiff --git a/CapaBusiness/obj/Debug/CapaBusiness.csproj.FileListAbsolute.txt b/CapaBusiness/obj/Debug/CapaBusiness.csproj.FileListAbsolute.txt[m
+[1mindex f547a9f..453ca8c 100644[m
+[1m--- a/CapaBusiness/obj/Debug/CapaBusiness.csproj.FileListAbsolute.txt[m
+[1m+++ b/CapaBusiness/obj/Debug/CapaBusiness.csproj.FileListAbsolute.txt[m
+[36m@@ -66,3 +66,17 @@[m [mC:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\CapaBusiness\obj\[m
+ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\CapaBusiness\bin\Debug\Entidades.dll[m
+ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\CapaBusiness\bin\Debug\Entidades.pdb[m
+ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\CapaBusiness\bin\Debug\Entidades.dll.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\CapaBusiness.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\CapaBusiness.pdb[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\CapaDataAccess.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\Entidades.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\CapaDataAccess.pdb[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\CapaDataAccess.dll.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\Entidades.pdb[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\Entidades.dll.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\bin\Debug\EntityFramework.xml[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\obj\Debug\CapaBusiness.csprojAssemblyReference.cache[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\obj\Debug\CapaBusiness.csproj.CoreCompileInputs.cache[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\obj\Debug\CapaBusiness.csproj.CopyComplete[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\obj\Debug\CapaBusiness.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaBusiness\obj\Debug\CapaBusiness.pdb[m
+[1mdiff --git a/CapaBusiness/obj/Debug/CapaBusiness.csprojAssemblyReference.cache b/CapaBusiness/obj/Debug/CapaBusiness.csprojAssemblyReference.cache[m
+[1mindex 203e861..fdbae5d 100644[m
+Binary files a/CapaBusiness/obj/Debug/CapaBusiness.csprojAssemblyReference.cache and b/CapaBusiness/obj/Debug/CapaBusiness.csprojAssemblyReference.cache differ
+[1mdiff --git a/CapaBusiness/obj/Debug/CapaBusiness.dll b/CapaBusiness/obj/Debug/CapaBusiness.dll[m
+[1mindex 8514b89..86badd6 100644[m
+Binary files a/CapaBusiness/obj/Debug/CapaBusiness.dll and b/CapaBusiness/obj/Debug/CapaBusiness.dll differ
+[1mdiff --git a/CapaBusiness/obj/Debug/CapaBusiness.pdb b/CapaBusiness/obj/Debug/CapaBusiness.pdb[m
+[1mindex f722d88..2e1864e 100644[m
+Binary files a/CapaBusiness/obj/Debug/CapaBusiness.pdb and b/CapaBusiness/obj/Debug/CapaBusiness.pdb differ
+[1mdiff --git a/CapaDataAccess/CapaDataAccess.csproj b/CapaDataAccess/CapaDataAccess.csproj[m
+[1mindex e8ac145..59ad32a 100644[m
+[1m--- a/CapaDataAccess/CapaDataAccess.csproj[m
+[1m+++ b/CapaDataAccess/CapaDataAccess.csproj[m
+[36m@@ -69,9 +69,9 @@[m
+     <None Include="packages.config" />[m
+   </ItemGroup>[m
+   <ItemGroup>[m
+[31m-    <ProjectReference Include="..\Entidades\Entidades.csproj">[m
+[32m+[m[32m    <ProjectReference Include="..\Entidades\Domain.csproj">[m
+       <Project>{BD0B60DB-B777-4938-8A9D-BCB9CFB604F7}</Project>[m
+[31m-      <Name>Entidades</Name>[m
+[32m+[m[32m      <Name>Domain</Name>[m
+     </ProjectReference>[m
+   </ItemGroup>[m
+   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />[m
+[1mdiff --git a/CapaDataAccess/Context/AplicacionDBContext.cs b/CapaDataAccess/Context/AplicacionDBContext.cs[m
+[1mindex 0e178b9..7f6d1ed 100644[m
+[1m--- a/CapaDataAccess/Context/AplicacionDBContext.cs[m
+[1m+++ b/CapaDataAccess/Context/AplicacionDBContext.cs[m
+[36m@@ -4,7 +4,7 @@[m [mnamespace CapaDataAccess.Context[m
+     using System.Data.Entity;[m
+     using System.ComponentModel.DataAnnotations.Schema;[m
+     using System.Linq;[m
+[31m-    using Entidades;[m
+[32m+[m[32m    using Domain;[m
+ [m
+     public partial class AplicacionDBContext : DbContext[m
+     {[m
+[1mdiff --git a/CapaDataAccess/Contracts/ICustomerRepository.cs b/CapaDataAccess/Contracts/ICustomerRepository.cs[m
+[1mindex b0cc7d0..cb429a7 100644[m
+[1m--- a/CapaDataAccess/Contracts/ICustomerRepository.cs[m
+[1m+++ b/CapaDataAccess/Contracts/ICustomerRepository.cs[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-﻿using Entidades;[m
+[32m+[m[32m﻿using Domain;[m
+ using System;[m
+ using System.Collections.Generic;[m
+ using System.Linq;[m
+[1mdiff --git a/CapaDataAccess/Contracts/IInvoiceDetailRepository.cs b/CapaDataAccess/Contracts/IInvoiceDetailRepository.cs[m
+[1mindex 2bb8432..8bac8a5 100644[m
+[1m--- a/CapaDataAccess/Contracts/IInvoiceDetailRepository.cs[m
+[1m+++ b/CapaDataAccess/Contracts/IInvoiceDetailRepository.cs[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-﻿using Entidades;[m
+[32m+[m[32m﻿using Domain;[m
+ using System;[m
+ using System.Collections.Generic;[m
+ using System.Linq;[m
+[1mdiff --git a/CapaDataAccess/Contracts/IInvoiceRepository.cs b/CapaDataAccess/Contracts/IInvoiceRepository.cs[m
+[1mindex ecfa9a3..3dbd0ba 100644[m
+[1m--- a/CapaDataAccess/Contracts/IInvoiceRepository.cs[m
+[1m+++ b/CapaDataAccess/Contracts/IInvoiceRepository.cs[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-﻿using Entidades;[m
+[32m+[m[32m﻿using Domain;[m
+ using System;[m
+ using System.Collections.Generic;[m
+ using System.Linq;[m
+[1mdiff --git a/CapaDataAccess/Contracts/IProductRepository.cs b/CapaDataAccess/Contracts/IProductRepository.cs[m
+[1mindex ba82338..6976fe9 100644[m
+[1m--- a/CapaDataAccess/Contracts/IProductRepository.cs[m
+[1m+++ b/CapaDataAccess/Contracts/IProductRepository.cs[m
+[36m@@ -1,5 +1,5 @@[m
+ ﻿using CapaDataAccess.Context;[m
+[31m-using Entidades;[m
+[32m+[m[32musing Domain;[m
+ using System;[m
+ using System.Collections.Generic;[m
+ using System.Linq;[m
+[1mdiff --git a/CapaDataAccess/Contracts/IUserRepository.cs b/CapaDataAccess/Contracts/IUserRepository.cs[m
+[1mindex 9b3e380..234f240 100644[m
+[1m--- a/CapaDataAccess/Contracts/IUserRepository.cs[m
+[1m+++ b/CapaDataAccess/Contracts/IUserRepository.cs[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-﻿using Entidades;[m
+[32m+[m[32m﻿using Domain;[m
+ using System;[m
+ using System.Collections.Generic;[m
+ using System.Linq;[m
+[1mdiff --git a/CapaDataAccess/Implementations/CustomerRepository.cs b/CapaDataAccess/Implementations/CustomerRepository.cs[m
+[1mindex fb762bb..d6824d3 100644[m
+[1m--- a/CapaDataAccess/Implementations/CustomerRepository.cs[m
+[1m+++ b/CapaDataAccess/Implementations/CustomerRepository.cs[m
+[36m@@ -1,6 +1,6 @@[m
+ ﻿using CapaDataAccess.Context;[m
+ using CapaDataAccess.Contracts;[m
+[31m-using Entidades;[m
+[32m+[m[32musing Domain;[m
+ using System;[m
+ using System.Collections.Generic;[m
+ using System.Linq;[m
+[1mdiff --git a/CapaDataAccess/Implementations/InvoiceDetailRepository.cs b/CapaDataAccess/Implementations/InvoiceDetailRepository.cs[m
+[1mindex aef1ca7..a231daf 100644[m
+[1m--- a/CapaDataAccess/Implementations/InvoiceDetailRepository.cs[m
+[1m+++ b/CapaDataAccess/Implementations/InvoiceDetailRepository.cs[m
+[36m@@ -1,6 +1,6 @@[m
+ ﻿using CapaDataAccess.Context;[m
+ using CapaDataAccess.Contracts;[m
+[31m-using Entidades;[m
+[32m+[m[32musing Domain;[m
+ using System;[m
+ using System.Collections.Generic;[m
+ using System.Linq;[m
+[1mdiff --git a/CapaDataAccess/Implementations/InvoiceRepository.cs b/CapaDataAccess/Implementations/InvoiceRepository.cs[m
+[1mindex d28b672..a480906 100644[m
+[1m--- a/CapaDataAccess/Implementations/InvoiceRepository.cs[m
+[1m+++ b/CapaDataAccess/Implementations/InvoiceRepository.cs[m
+[36m@@ -1,6 +1,6 @@[m
+ ﻿using CapaDataAccess.Context;[m
+ using CapaDataAccess.Contracts;[m
+[31m-using Entidades;[m
+[32m+[m[32musing Domain;[m
+ using System;[m
+ using System.Collections.Generic;[m
+ using System.Linq;[m
+[1mdiff --git a/CapaDataAccess/Implementations/ProductRepository.cs b/CapaDataAccess/Implementations/ProductRepository.cs[m
+[1mindex 738c782..8568e96 100644[m
+[1m--- a/CapaDataAccess/Implementations/ProductRepository.cs[m
+[1m+++ b/CapaDataAccess/Implementations/ProductRepository.cs[m
+[36m@@ -1,6 +1,6 @@[m
+ ﻿using CapaDataAccess.Context;[m
+ using CapaDataAccess.Contracts;[m
+[31m-using Entidades;[m
+[32m+[m[32musing Domain;[m
+ using System;[m
+ using System.Collections.Generic;[m
+ using System.Linq;[m
+[1mdiff --git a/CapaDataAccess/Implementations/UserRepository.cs b/CapaDataAccess/Implementations/UserRepository.cs[m
+[1mindex 5c5f223..ec75cf9 100644[m
+[1m--- a/CapaDataAccess/Implementations/UserRepository.cs[m
+[1m+++ b/CapaDataAccess/Implementations/UserRepository.cs[m
+[36m@@ -1,6 +1,6 @@[m
+ ﻿using CapaDataAccess.Context;[m
+ using CapaDataAccess.Contracts;[m
+[31m-using Entidades;[m
+[32m+[m[32musing Domain;[m
+ using System;[m
+ using System.Collections.Generic;[m
+ using System.Linq;[m
+[1mdiff --git a/CapaDataAccess/bin/Debug/CapaDataAccess.dll b/CapaDataAccess/bin/Debug/CapaDataAccess.dll[m
+[1mindex 9ae202b..42ca049 100644[m
+Binary files a/CapaDataAccess/bin/Debug/CapaDataAccess.dll and b/CapaDataAccess/bin/Debug/CapaDataAccess.dll differ
+[1mdiff --git a/CapaDataAccess/bin/Debug/CapaDataAccess.pdb b/CapaDataAccess/bin/Debug/CapaDataAccess.pdb[m
+[1mindex 69dcc61..516768c 100644[m
+Binary files a/CapaDataAccess/bin/Debug/CapaDataAccess.pdb and b/CapaDataAccess/bin/Debug/CapaDataAccess.pdb differ
+[1mdiff --git a/CapaDataAccess/bin/Debug/Entidades.dll b/CapaDataAccess/bin/Debug/Entidades.dll[m
+[1mindex dfa48f5..95d49a8 100644[m
+Binary files a/CapaDataAccess/bin/Debug/Entidades.dll and b/CapaDataAccess/bin/Debug/Entidades.dll differ
+[1mdiff --git a/CapaDataAccess/bin/Debug/Entidades.pdb b/CapaDataAccess/bin/Debug/Entidades.pdb[m
+[1mindex 0a93fa3..89cb7fb 100644[m
+Binary files a/CapaDataAccess/bin/Debug/Entidades.pdb and b/CapaDataAccess/bin/Debug/Entidades.pdb differ
+[1mdiff --git a/CapaDataAccess/obj/Debug/CapaDataAccess.csproj.CoreCompileInputs.cache b/CapaDataAccess/obj/Debug/CapaDataAccess.csproj.CoreCompileInputs.cache[m
+[1mindex 6dfa606..0254bb3 100644[m
+[1m--- a/CapaDataAccess/obj/Debug/CapaDataAccess.csproj.CoreCompileInputs.cache[m
+[1m+++ b/CapaDataAccess/obj/Debug/CapaDataAccess.csproj.CoreCompileInputs.cache[m
+[36m@@ -1 +1 @@[m
+[31m-d0d8077e8ee951b003c1d2784db5431fd275b587[m
+[32m+[m[32md80f611bc3ab8e213207f9e21820e76f64ac8955[m
+[1mdiff --git a/CapaDataAccess/obj/Debug/CapaDataAccess.csproj.FileListAbsolute.txt b/CapaDataAccess/obj/Debug/CapaDataAccess.csproj.FileListAbsolute.txt[m
+[1mindex 91d082c..b8a402f 100644[m
+[1m--- a/CapaDataAccess/obj/Debug/CapaDataAccess.csproj.FileListAbsolute.txt[m
+[1m+++ b/CapaDataAccess/obj/Debug/CapaDataAccess.csproj.FileListAbsolute.txt[m
+[36m@@ -69,3 +69,18 @@[m [mC:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\CapaDataAccess\ob[m
+ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\CapaDataAccess\bin\Debug\Entidades.dll[m
+ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\CapaDataAccess\bin\Debug\Entidades.pdb[m
+ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\CapaDataAccess\bin\Debug\Entidades.dll.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaDataAccess\bin\Debug\CapaDataAccess.dll.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaDataAccess\bin\Debug\CapaDataAccess.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaDataAccess\bin\Debug\CapaDataAccess.pdb[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaDataAccess\bin\Debug\Entidades.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaDataAccess\bin\Debug\EntityFramework.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaDataAccess\bin\Debug\EntityFramework.SqlServer.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaDataAccess\bin\Debug\Entidades.pdb[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaDataAccess\bin\Debug\Entidades.dll.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaDataAccess\bin\Debug\EntityFramework.xml[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaDataAccess\bin\Debug\EntityFramework.SqlServer.xml[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaDataAccess\obj\Debug\CapaDataAccess.csprojAssemblyReference.cache[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaDataAccess\obj\Debug\CapaDataAccess.csproj.CoreCompileInputs.cache[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaDataAccess\obj\Debug\CapaDataAccess.csproj.CopyComplete[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaDataAccess\obj\Debug\CapaDataAccess.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaDataAccess\obj\Debug\CapaDataAccess.pdb[m
+[1mdiff --git a/CapaDataAccess/obj/Debug/CapaDataAccess.csprojAssemblyReference.cache b/CapaDataAccess/obj/Debug/CapaDataAccess.csprojAssemblyReference.cache[m
+[1mindex 251c89d..05df930 100644[m
+Binary files a/CapaDataAccess/obj/Debug/CapaDataAccess.csprojAssemblyReference.cache and b/CapaDataAccess/obj/Debug/CapaDataAccess.csprojAssemblyReference.cache differ
+[1mdiff --git a/CapaDataAccess/obj/Debug/CapaDataAccess.dll b/CapaDataAccess/obj/Debug/CapaDataAccess.dll[m
+[1mindex 9ae202b..42ca049 100644[m
+Binary files a/CapaDataAccess/obj/Debug/CapaDataAccess.dll and b/CapaDataAccess/obj/Debug/CapaDataAccess.dll differ
+[1mdiff --git a/CapaDataAccess/obj/Debug/CapaDataAccess.pdb b/CapaDataAccess/obj/Debug/CapaDataAccess.pdb[m
+[1mindex 69dcc61..516768c 100644[m
+Binary files a/CapaDataAccess/obj/Debug/CapaDataAccess.pdb and b/CapaDataAccess/obj/Debug/CapaDataAccess.pdb differ
+[1mdiff --git a/CapaService/CapaService.csproj b/CapaService/CapaService.csproj[m
+[1mindex 3214ac6..896aad4 100644[m
+[1m--- a/CapaService/CapaService.csproj[m
+[1m+++ b/CapaService/CapaService.csproj[m
+[36m@@ -49,9 +49,9 @@[m
+       <Project>{30ff6234-eef2-4b05-9fb9-dbeb6c381317}</Project>[m
+       <Name>CapaBusiness</Name>[m
+     </ProjectReference>[m
+[31m-    <ProjectReference Include="..\Entidades\Entidades.csproj">[m
+[32m+[m[32m    <ProjectReference Include="..\Entidades\Domain.csproj">[m
+       <Project>{BD0B60DB-B777-4938-8A9D-BCB9CFB604F7}</Project>[m
+[31m-      <Name>Entidades</Name>[m
+[32m+[m[32m      <Name>Domain</Name>[m
+     </ProjectReference>[m
+   </ItemGroup>[m
+   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />[m
+[1mdiff --git a/CapaService/InvoiceService.cs b/CapaService/InvoiceService.cs[m
+[1mindex 5b12d58..5e3efa1 100644[m
+[1m--- a/CapaService/InvoiceService.cs[m
+[1m+++ b/CapaService/InvoiceService.cs[m
+[36m@@ -1,5 +1,5 @@[m
+ ﻿using CapaBusiness;[m
+[31m-using Entidades;[m
+[32m+[m[32musing Domain;[m
+ using System;[m
+ using System.Collections.Generic;[m
+ using System.Linq;[m
+[1mdiff --git a/CapaService/bin/Debug/CapaBusiness.dll b/CapaService/bin/Debug/CapaBusiness.dll[m
+[1mindex 8514b89..86badd6 100644[m
+Binary files a/CapaService/bin/Debug/CapaBusiness.dll and b/CapaService/bin/Debug/CapaBusiness.dll differ
+[1mdiff --git a/CapaService/bin/Debug/CapaBusiness.pdb b/CapaService/bin/Debug/CapaBusiness.pdb[m
+[1mindex f722d88..2e1864e 100644[m
+Binary files a/CapaService/bin/Debug/CapaBusiness.pdb and b/CapaService/bin/Debug/CapaBusiness.pdb differ
+[1mdiff --git a/CapaService/bin/Debug/CapaDataAccess.dll b/CapaService/bin/Debug/CapaDataAccess.dll[m
+[1mindex 9ae202b..42ca049 100644[m
+Binary files a/CapaService/bin/Debug/CapaDataAccess.dll and b/CapaService/bin/Debug/CapaDataAccess.dll differ
+[1mdiff --git a/CapaService/bin/Debug/CapaDataAccess.pdb b/CapaService/bin/Debug/CapaDataAccess.pdb[m
+[1mindex 69dcc61..516768c 100644[m
+Binary files a/CapaService/bin/Debug/CapaDataAccess.pdb and b/CapaService/bin/Debug/CapaDataAccess.pdb differ
+[1mdiff --git a/CapaService/bin/Debug/CapaService.dll b/CapaService/bin/Debug/CapaService.dll[m
+[1mindex 93cd024..13597d1 100644[m
+Binary files a/CapaService/bin/Debug/CapaService.dll and b/CapaService/bin/Debug/CapaService.dll differ
+[1mdiff --git a/CapaService/bin/Debug/CapaService.pdb b/CapaService/bin/Debug/CapaService.pdb[m
+[1mindex 2fa4beb..9364c65 100644[m
+Binary files a/CapaService/bin/Debug/CapaService.pdb and b/CapaService/bin/Debug/CapaService.pdb differ
+[1mdiff --git a/CapaService/bin/Debug/Entidades.dll b/CapaService/bin/Debug/Entidades.dll[m
+[1mindex dfa48f5..95d49a8 100644[m
+Binary files a/CapaService/bin/Debug/Entidades.dll and b/CapaService/bin/Debug/Entidades.dll differ
+[1mdiff --git a/CapaService/bin/Debug/Entidades.pdb b/CapaService/bin/Debug/Entidades.pdb[m
+[1mindex 0a93fa3..89cb7fb 100644[m
+Binary files a/CapaService/bin/Debug/Entidades.pdb and b/CapaService/bin/Debug/Entidades.pdb differ
+[1mdiff --git a/CapaService/obj/Debug/CapaService.csproj.CoreCompileInputs.cache b/CapaService/obj/Debug/CapaService.csproj.CoreCompileInputs.cache[m
+[1mindex aeea99d..0e5b2de 100644[m
+[1m--- a/CapaService/obj/Debug/CapaService.csproj.CoreCompileInputs.cache[m
+[1m+++ b/CapaService/obj/Debug/CapaService.csproj.CoreCompileInputs.cache[m
+[36m@@ -1 +1 @@[m
+[31m-2b42aa8ee9bc88d7413eae347bae74b022251f7b[m
+[32m+[m[32m7bef706c652e46245f9075df380e25aa37d42fe1[m
+[1mdiff --git a/CapaService/obj/Debug/CapaService.csproj.FileListAbsolute.txt b/CapaService/obj/Debug/CapaService.csproj.FileListAbsolute.txt[m
+[1mindex 04c2735..5f5d782 100644[m
+[1m--- a/CapaService/obj/Debug/CapaService.csproj.FileListAbsolute.txt[m
+[1m+++ b/CapaService/obj/Debug/CapaService.csproj.FileListAbsolute.txt[m
+[36m@@ -53,3 +53,20 @@[m [mC:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\CapaService\obj\D[m
+ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\CapaService\bin\Debug\Entidades.dll[m
+ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\CapaService\bin\Debug\Entidades.pdb[m
+ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\CapaService\bin\Debug\Entidades.dll.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\bin\Debug\CapaService.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\bin\Debug\CapaService.pdb[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\bin\Debug\CapaBusiness.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\bin\Debug\Entidades.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\bin\Debug\CapaDataAccess.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\bin\Debug\EntityFramework.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\bin\Debug\CapaBusiness.pdb[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\bin\Debug\Entidades.pdb[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\bin\Debug\Entidades.dll.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\bin\Debug\CapaDataAccess.pdb[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\bin\Debug\CapaDataAccess.dll.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\bin\Debug\EntityFramework.xml[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\obj\Debug\CapaService.csprojAssemblyReference.cache[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\obj\Debug\CapaService.csproj.CoreCompileInputs.cache[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\obj\Debug\CapaService.csproj.CopyComplete[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\obj\Debug\CapaService.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\CapaService\obj\Debug\CapaService.pdb[m
+[1mdiff --git a/CapaService/obj/Debug/CapaService.csprojAssemblyReference.cache b/CapaService/obj/Debug/CapaService.csprojAssemblyReference.cache[m
+[1mindex 8336f03..0c23aa1 100644[m
+Binary files a/CapaService/obj/Debug/CapaService.csprojAssemblyReference.cache and b/CapaService/obj/Debug/CapaService.csprojAssemblyReference.cache differ
+[1mdiff --git a/CapaService/obj/Debug/CapaService.dll b/CapaService/obj/Debug/CapaService.dll[m
+[1mindex 93cd024..13597d1 100644[m
+Binary files a/CapaService/obj/Debug/CapaService.dll and b/CapaService/obj/Debug/CapaService.dll differ
+[1mdiff --git a/CapaService/obj/Debug/CapaService.pdb b/CapaService/obj/Debug/CapaService.pdb[m
+[1mindex 2fa4beb..9364c65 100644[m
+Binary files a/CapaService/obj/Debug/CapaService.pdb and b/CapaService/obj/Debug/CapaService.pdb differ
+[1mdiff --git a/Entidades/Class1.cs b/Entidades/Class1.cs[m
+[1mindex 55cad3a..6d09659 100644[m
+[1m--- a/Entidades/Class1.cs[m
+[1m+++ b/Entidades/Class1.cs[m
+[36m@@ -4,7 +4,7 @@[m [musing System.Linq;[m
+ using System.Text;[m
+ using System.Threading.Tasks;[m
+ [m
+[31m-namespace Entidades[m
+[32m+[m[32mnamespace Domain[m
+ {[m
+     class Class1[m
+     {[m
+[1mdiff --git a/Entidades/Customer.cs b/Entidades/Customer.cs[m
+[1mindex 523c6e5..c2e7675 100644[m
+[1m--- a/Entidades/Customer.cs[m
+[1m+++ b/Entidades/Customer.cs[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-namespace Entidades[m
+[32m+[m[32mnamespace Domain[m
+ {[m
+     using System;[m
+     using System.Collections.Generic;[m
+[1mdiff --git a/Entidades/Entidades.csproj b/Entidades/Entidades.csproj[m
+[1mdeleted file mode 100644[m
+[1mindex 683507b..0000000[m
+[1m--- a/Entidades/Entidades.csproj[m
+[1m+++ /dev/null[m
+[36m@@ -1,67 +0,0 @@[m
+[31m-﻿<?xml version="1.0" encoding="utf-8"?>[m
+[31m-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">[m
+[31m-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />[m
+[31m-  <PropertyGroup>[m
+[31m-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>[m
+[31m-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>[m
+[31m-    <ProjectGuid>{BD0B60DB-B777-4938-8A9D-BCB9CFB604F7}</ProjectGuid>[m
+[31m-    <OutputType>Library</OutputType>[m
+[31m-    <AppDesignerFolder>Properties</AppDesignerFolder>[m
+[31m-    <RootNamespace>Entidades</RootNamespace>[m
+[31m-    <AssemblyName>Entidades</AssemblyName>[m
+[31m-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>[m
+[31m-    <FileAlignment>512</FileAlignment>[m
+[31m-    <Deterministic>true</Deterministic>[m
+[31m-  </PropertyGroup>[m
+[31m-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">[m
+[31m-    <DebugSymbols>true</DebugSymbols>[m
+[31m-    <DebugType>full</DebugType>[m
+[31m-    <Optimize>false</Optimize>[m
+[31m-    <OutputPath>bin\Debug\</OutputPath>[m
+[31m-    <DefineConstants>DEBUG;TRACE</DefineConstants>[m
+[31m-    <ErrorReport>prompt</ErrorReport>[m
+[31m-    <WarningLevel>4</WarningLevel>[m
+[31m-  </PropertyGroup>[m
+[31m-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">[m
+[31m-    <DebugType>pdbonly</DebugType>[m
+[31m-    <Optimize>true</Optimize>[m
+[31m-    <OutputPath>bin\Release\</OutputPath>[m
+[31m-    <DefineConstants>TRACE</DefineConstants>[m
+[31m-    <ErrorReport>prompt</ErrorReport>[m
+[31m-    <WarningLevel>4</WarningLevel>[m
+[31m-  </PropertyGroup>[m
+[31m-  <ItemGroup>[m
+[31m-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">[m
+[31m-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>[m
+[31m-    </Reference>[m
+[31m-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">[m
+[31m-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>[m
+[31m-    </Reference>[m
+[31m-    <Reference Include="System" />[m
+[31m-    <Reference Include="System.ComponentModel.DataAnnotations" />[m
+[31m-    <Reference Include="System.Core" />[m
+[31m-    <Reference Include="System.Xml.Linq" />[m
+[31m-    <Reference Include="System.Data.DataSetExtensions" />[m
+[31m-    <Reference Include="Microsoft.CSharp" />[m
+[31m-    <Reference Include="System.Data" />[m
+[31m-    <Reference Include="System.Net.Http" />[m
+[31m-    <Reference Include="System.Xml" />[m
+[31m-  </ItemGroup>[m
+[31m-  <ItemGroup>[m
+[31m-    <Compile Include="Class1.cs" />[m
+[31m-    <Compile Include="Customer.cs" />[m
+[31m-    <Compile Include="Invoice.cs" />[m
+[31m-    <Compile Include="InvoiceDetail.cs" />[m
+[31m-    <Compile Include="Product.cs" />[m
+[31m-    <Compile Include="Properties\AssemblyInfo.cs" />[m
+[31m-    <Compile Include="User.cs" />[m
+[31m-  </ItemGroup>[m
+[31m-  <ItemGroup>[m
+[31m-    <WCFMetadata Include="Connected Services\" />[m
+[31m-  </ItemGroup>[m
+[31m-  <ItemGroup>[m
+[31m-    <None Include="App.config" />[m
+[31m-    <None Include="packages.config" />[m
+[31m-  </ItemGroup>[m
+[31m-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />[m
+[31m-</Project>[m
+\ No newline at end of file[m
+[1mdiff --git a/Entidades/Invoice.cs b/Entidades/Invoice.cs[m
+[1mindex d3fb170..92f4477 100644[m
+[1m--- a/Entidades/Invoice.cs[m
+[1m+++ b/Entidades/Invoice.cs[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-namespace Entidades[m
+[32m+[m[32mnamespace Domain[m
+ {[m
+     using System;[m
+     using System.Collections.Generic;[m
+[1mdiff --git a/Entidades/InvoiceDetail.cs b/Entidades/InvoiceDetail.cs[m
+[1mindex 612b014..a28c4c7 100644[m
+[1m--- a/Entidades/InvoiceDetail.cs[m
+[1m+++ b/Entidades/InvoiceDetail.cs[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-namespace Entidades[m
+[32m+[m[32mnamespace Domain[m
+ {[m
+     using System;[m
+     using System.Collections.Generic;[m
+[1mdiff --git a/Entidades/Product.cs b/Entidades/Product.cs[m
+[1mindex 60dd877..4dc815b 100644[m
+[1m--- a/Entidades/Product.cs[m
+[1m+++ b/Entidades/Product.cs[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-namespace Entidades[m
+[32m+[m[32mnamespace Domain[m
+ {[m
+     using System;[m
+     using System.Collections.Generic;[m
+[1mdiff --git a/Entidades/Properties/AssemblyInfo.cs b/Entidades/Properties/AssemblyInfo.cs[m
+[1mindex 35744c7..0a6b49a 100644[m
+[1m--- a/Entidades/Properties/AssemblyInfo.cs[m
+[1m+++ b/Entidades/Properties/AssemblyInfo.cs[m
+[36m@@ -5,11 +5,11 @@[m [musing System.Runtime.InteropServices;[m
+ // La información general de un ensamblado se controla mediante el siguiente [m
+ // conjunto de atributos. Cambie estos valores de atributo para modificar la información[m
+ // asociada con un ensamblado.[m
+[31m-[assembly: AssemblyTitle("Entidades")][m
+[32m+[m[32m[assembly: AssemblyTitle("Domain")][m
+ [assembly: AssemblyDescription("")][m
+ [assembly: AssemblyConfiguration("")][m
+ [assembly: AssemblyCompany("")][m
+[31m-[assembly: AssemblyProduct("Entidades")][m
+[32m+[m[32m[assembly: AssemblyProduct("Domain")][m
+ [assembly: AssemblyCopyright("Copyright ©  2018")][m
+ [assembly: AssemblyTrademark("")][m
+ [assembly: AssemblyCulture("")][m
+[1mdiff --git a/Entidades/User.cs b/Entidades/User.cs[m
+[1mindex 4e94449..b363db4 100644[m
+[1m--- a/Entidades/User.cs[m
+[1m+++ b/Entidades/User.cs[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-namespace Entidades[m
+[32m+[m[32mnamespace Domain[m
+ {[m
+     using System;[m
+     using System.Collections.Generic;[m
+[1mdiff --git a/Entidades/bin/Debug/Entidades.dll b/Entidades/bin/Debug/Entidades.dll[m
+[1mindex dfa48f5..95d49a8 100644[m
+Binary files a/Entidades/bin/Debug/Entidades.dll and b/Entidades/bin/Debug/Entidades.dll differ
+[1mdiff --git a/Entidades/bin/Debug/Entidades.pdb b/Entidades/bin/Debug/Entidades.pdb[m
+[1mindex 0a93fa3..89cb7fb 100644[m
+Binary files a/Entidades/bin/Debug/Entidades.pdb and b/Entidades/bin/Debug/Entidades.pdb differ
+[1mdiff --git a/Entidades/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache b/Entidades/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache[m
+[1mindex 2d6abbd..f9776b9 100644[m
+Binary files a/Entidades/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache and b/Entidades/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache differ
+[1mdiff --git a/Entidades/obj/Debug/Entidades.csproj.CoreCompileInputs.cache b/Entidades/obj/Debug/Entidades.csproj.CoreCompileInputs.cache[m
+[1mindex 645ddf2..2d92b85 100644[m
+[1m--- a/Entidades/obj/Debug/Entidades.csproj.CoreCompileInputs.cache[m
+[1m+++ b/Entidades/obj/Debug/Entidades.csproj.CoreCompileInputs.cache[m
+[36m@@ -1 +1 @@[m
+[31m-e71a5d5a0354a743816ed7fcff69f00a0dcc50c9[m
+[32m+[m[32m3401f957337f618d75d1c1cb9d3479568bb688ad[m
+[1mdiff --git a/Entidades/obj/Debug/Entidades.csproj.FileListAbsolute.txt b/Entidades/obj/Debug/Entidades.csproj.FileListAbsolute.txt[m
+[1mindex 22aada1..c37a25f 100644[m
+[1m--- a/Entidades/obj/Debug/Entidades.csproj.FileListAbsolute.txt[m
+[1m+++ b/Entidades/obj/Debug/Entidades.csproj.FileListAbsolute.txt[m
+[36m@@ -10,3 +10,15 @@[m [mC:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\Entidades\obj\Deb[m
+ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\Entidades\obj\Debug\Entidades.csproj.CopyComplete[m
+ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\Entidades\obj\Debug\Entidades.dll[m
+ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\Entidades\obj\Debug\Entidades.pdb[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\Entidades.dll.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\Entidades.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\Entidades.pdb[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\EntityFramework.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\EntityFramework.SqlServer.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\EntityFramework.xml[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\EntityFramework.SqlServer.xml[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\obj\Debug\Entidades.csproj.CopyComplete[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\obj\Debug\Entidades.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\obj\Debug\Entidades.pdb[m
+[1mdiff --git a/Entidades/obj/Debug/Entidades.dll b/Entidades/obj/Debug/Entidades.dll[m
+[1mindex dfa48f5..95d49a8 100644[m
+Binary files a/Entidades/obj/Debug/Entidades.dll and b/Entidades/obj/Debug/Entidades.dll differ
+[1mdiff --git a/Entidades/obj/Debug/Entidades.pdb b/Entidades/obj/Debug/Entidades.pdb[m
+[1mindex 0a93fa3..89cb7fb 100644[m
+Binary files a/Entidades/obj/Debug/Entidades.pdb and b/Entidades/obj/Debug/Entidades.pdb differ
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0.sln b/Softologia.Capacitacion.TPFinalv1.0.sln[m
+[1mindex 04a083c..630dea0 100644[m
+[1m--- a/Softologia.Capacitacion.TPFinalv1.0.sln[m
+[1m+++ b/Softologia.Capacitacion.TPFinalv1.0.sln[m
+[36m@@ -11,7 +11,7 @@[m [mProject("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaService", "CapaService\[m
+ EndProject[m
+ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Softologia.Capacitacion.TPFinalv1.0", "Softologia.Capacitacion.TPFinalv1.0\Softologia.Capacitacion.TPFinalv1.0.csproj", "{71A8CB62-BA51-42B2-9922-9C58B3650E46}"[m
+ EndProject[m
+[31m-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{BD0B60DB-B777-4938-8A9D-BCB9CFB604F7}"[m
+[32m+[m[32mProject("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Entidades\Domain.csproj", "{BD0B60DB-B777-4938-8A9D-BCB9CFB604F7}"[m
+ EndProject[m
+ Global[m
+ 	GlobalSection(SolutionConfigurationPlatforms) = preSolution[m
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/Controllers/CustomersController.cs b/Softologia.Capacitacion.TPFinalv1.0/Controllers/CustomersController.cs[m
+[1mindex 9eb1519..106648c 100644[m
+[1m--- a/Softologia.Capacitacion.TPFinalv1.0/Controllers/CustomersController.cs[m
+[1m+++ b/Softologia.Capacitacion.TPFinalv1.0/Controllers/CustomersController.cs[m
+[36m@@ -9,7 +9,7 @@[m [musing System.Net.Http;[m
+ using System.Web.Http;[m
+ using System.Web.Http.Description;[m
+ using CapaDataAccess.Context;[m
+[31m-using Entidades;[m
+[32m+[m[32musing Domain;[m
+ using Softologia.Capacitacion.TPFinalv1._0.Models;[m
+ [m
+ namespace Softologia.Capacitacion.TPFinalv1._0.Controllers[m
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/Softologia.Capacitacion.TPFinalv1.0.csproj b/Softologia.Capacitacion.TPFinalv1.0/Softologia.Capacitacion.TPFinalv1.0.csproj[m
+[1mindex 3436a77..66c18e5 100644[m
+[1m--- a/Softologia.Capacitacion.TPFinalv1.0/Softologia.Capacitacion.TPFinalv1.0.csproj[m
+[1m+++ b/Softologia.Capacitacion.TPFinalv1.0/Softologia.Capacitacion.TPFinalv1.0.csproj[m
+[36m@@ -127,9 +127,9 @@[m
+       <Project>{e6626b5e-f385-4096-92ab-b53cb091e8f4}</Project>[m
+       <Name>CapaService</Name>[m
+     </ProjectReference>[m
+[31m-    <ProjectReference Include="..\Entidades\Entidades.csproj">[m
+[32m+[m[32m    <ProjectReference Include="..\Entidades\Domain.csproj">[m
+       <Project>{BD0B60DB-B777-4938-8A9D-BCB9CFB604F7}</Project>[m
+[31m-      <Name>Entidades</Name>[m
+[32m+[m[32m      <Name>Domain</Name>[m
+     </ProjectReference>[m
+   </ItemGroup>[m
+   <PropertyGroup>[m
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/Web.config b/Softologia.Capacitacion.TPFinalv1.0/Web.config[m
+[1mindex 3165864..9dc8c5f 100644[m
+[1m--- a/Softologia.Capacitacion.TPFinalv1.0/Web.config[m
+[1m+++ b/Softologia.Capacitacion.TPFinalv1.0/Web.config[m
+[36m@@ -56,6 +56,6 @@[m
+   <connectionStrings>[m
+     <add name="AplicacionDBContext" connectionString="data source=DESKTOP-UAJ2TH2\SQLEXPRESS;initial catalog=TPFinal;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />[m
+     <add name="AplicacionDBContext1" connectionString="data source=DESKTOP-JV06TTG\SQLEXPRESS;initial catalog=TPFinal;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />[m
+[31m-    <add name="AplicacionDBContext2" connectionString="data source=CASA-PC-ABAJO\SQLEXPRESS;initial catalog=TPFinal;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />[m
+[32m+[m[32m    <add name="AplicacionDBContext2" connectionString="data source=DESKTOP-JV06TTG\SQLEXPRESS;initial catalog=TPFinal;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />[m
+   </connectionStrings>[m
+ </configuration>[m
+\ No newline at end of file[m
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/bin/CapaBusiness.dll b/Softologia.Capacitacion.TPFinalv1.0/bin/CapaBusiness.dll[m
+[1mindex 8514b89..86badd6 100644[m
+Binary files a/Softologia.Capacitacion.TPFinalv1.0/bin/CapaBusiness.dll and b/Softologia.Capacitacion.TPFinalv1.0/bin/CapaBusiness.dll differ
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/bin/CapaBusiness.pdb b/Softologia.Capacitacion.TPFinalv1.0/bin/CapaBusiness.pdb[m
+[1mindex f722d88..2e1864e 100644[m
+Binary files a/Softologia.Capacitacion.TPFinalv1.0/bin/CapaBusiness.pdb and b/Softologia.Capacitacion.TPFinalv1.0/bin/CapaBusiness.pdb differ
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/bin/CapaDataAccess.dll b/Softologia.Capacitacion.TPFinalv1.0/bin/CapaDataAccess.dll[m
+[1mindex 9ae202b..42ca049 100644[m
+Binary files a/Softologia.Capacitacion.TPFinalv1.0/bin/CapaDataAccess.dll and b/Softologia.Capacitacion.TPFinalv1.0/bin/CapaDataAccess.dll differ
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/bin/CapaDataAccess.pdb b/Softologia.Capacitacion.TPFinalv1.0/bin/CapaDataAccess.pdb[m
+[1mindex 69dcc61..516768c 100644[m
+Binary files a/Softologia.Capacitacion.TPFinalv1.0/bin/CapaDataAccess.pdb and b/Softologia.Capacitacion.TPFinalv1.0/bin/CapaDataAccess.pdb differ
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/bin/CapaService.dll b/Softologia.Capacitacion.TPFinalv1.0/bin/CapaService.dll[m
+[1mindex 93cd024..13597d1 100644[m
+Binary files a/Softologia.Capacitacion.TPFinalv1.0/bin/CapaService.dll and b/Softologia.Capacitacion.TPFinalv1.0/bin/CapaService.dll differ
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/bin/CapaService.pdb b/Softologia.Capacitacion.TPFinalv1.0/bin/CapaService.pdb[m
+[1mindex 2fa4beb..9364c65 100644[m
+Binary files a/Softologia.Capacitacion.TPFinalv1.0/bin/CapaService.pdb and b/Softologia.Capacitacion.TPFinalv1.0/bin/CapaService.pdb differ
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/bin/Entidades.dll b/Softologia.Capacitacion.TPFinalv1.0/bin/Entidades.dll[m
+[1mindex dfa48f5..95d49a8 100644[m
+Binary files a/Softologia.Capacitacion.TPFinalv1.0/bin/Entidades.dll and b/Softologia.Capacitacion.TPFinalv1.0/bin/Entidades.dll differ
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/bin/Entidades.pdb b/Softologia.Capacitacion.TPFinalv1.0/bin/Entidades.pdb[m
+[1mindex 0a93fa3..89cb7fb 100644[m
+Binary files a/Softologia.Capacitacion.TPFinalv1.0/bin/Entidades.pdb and b/Softologia.Capacitacion.TPFinalv1.0/bin/Entidades.pdb differ
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/bin/Softologia.Capacitacion.TP2v1.0.dll b/Softologia.Capacitacion.TPFinalv1.0/bin/Softologia.Capacitacion.TP2v1.0.dll[m
+[1mindex 42409eb..d353a78 100644[m
+Binary files a/Softologia.Capacitacion.TPFinalv1.0/bin/Softologia.Capacitacion.TP2v1.0.dll and b/Softologia.Capacitacion.TPFinalv1.0/bin/Softologia.Capacitacion.TP2v1.0.dll differ
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/bin/Softologia.Capacitacion.TP2v1.0.dll.config b/Softologia.Capacitacion.TPFinalv1.0/bin/Softologia.Capacitacion.TP2v1.0.dll.config[m
+[1mindex 3165864..9dc8c5f 100644[m
+[1m--- a/Softologia.Capacitacion.TPFinalv1.0/bin/Softologia.Capacitacion.TP2v1.0.dll.config[m
+[1m+++ b/Softologia.Capacitacion.TPFinalv1.0/bin/Softologia.Capacitacion.TP2v1.0.dll.config[m
+[36m@@ -56,6 +56,6 @@[m
+   <connectionStrings>[m
+     <add name="AplicacionDBContext" connectionString="data source=DESKTOP-UAJ2TH2\SQLEXPRESS;initial catalog=TPFinal;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />[m
+     <add name="AplicacionDBContext1" connectionString="data source=DESKTOP-JV06TTG\SQLEXPRESS;initial catalog=TPFinal;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />[m
+[31m-    <add name="AplicacionDBContext2" connectionString="data source=CASA-PC-ABAJO\SQLEXPRESS;initial catalog=TPFinal;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />[m
+[32m+[m[32m    <add name="AplicacionDBContext2" connectionString="data source=DESKTOP-JV06TTG\SQLEXPRESS;initial catalog=TPFinal;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />[m
+   </connectionStrings>[m
+ </configuration>[m
+\ No newline at end of file[m
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/bin/Softologia.Capacitacion.TP2v1.0.pdb b/Softologia.Capacitacion.TPFinalv1.0/bin/Softologia.Capacitacion.TP2v1.0.pdb[m
+[1mindex 49f691a..eee84cb 100644[m
+Binary files a/Softologia.Capacitacion.TPFinalv1.0/bin/Softologia.Capacitacion.TP2v1.0.pdb and b/Softologia.Capacitacion.TPFinalv1.0/bin/Softologia.Capacitacion.TP2v1.0.pdb differ
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TP2v1.0.dll b/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TP2v1.0.dll[m
+[1mindex 42409eb..d353a78 100644[m
+Binary files a/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TP2v1.0.dll and b/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TP2v1.0.dll differ
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TP2v1.0.pdb b/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TP2v1.0.pdb[m
+[1mindex 49f691a..eee84cb 100644[m
+Binary files a/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TP2v1.0.pdb and b/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TP2v1.0.pdb differ
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TPFinalv1.0.csproj.CoreCompileInputs.cache b/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TPFinalv1.0.csproj.CoreCompileInputs.cache[m
+[1mindex 7581dae..9d86798 100644[m
+[1m--- a/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TPFinalv1.0.csproj.CoreCompileInputs.cache[m
+[1m+++ b/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TPFinalv1.0.csproj.CoreCompileInputs.cache[m
+[36m@@ -1 +1 @@[m
+[31m-24484dc04591fdb123e016204b8f4c291375d414[m
+[32m+[m[32m4b4339a6842c3793e4c6b47f60ee49ca643ad2fa[m
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TPFinalv1.0.csproj.FileListAbsolute.txt b/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TPFinalv1.0.csproj.FileListAbsolute.txt[m
+[1mindex 0fcc68d..d29e147 100644[m
+[1m--- a/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TPFinalv1.0.csproj.FileListAbsolute.txt[m
+[1m+++ b/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TPFinalv1.0.csproj.FileListAbsolute.txt[m
+[36m@@ -221,3 +221,84 @@[m [mC:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\Softologia.Capaci[m
+ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\Softologia.Capacitacion.TPFinalv1.0\bin\Entidades.dll[m
+ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\Softologia.Capacitacion.TPFinalv1.0\bin\Entidades.pdb[m
+ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\Softologia.Capacitacion.TPFinalv1.0\bin\Entidades.dll.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\Softologia.Capacitacion.TP2v1.0.dll.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\Softologia.Capacitacion.TP2v1.0.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\Softologia.Capacitacion.TP2v1.0.pdb[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\csc.exe[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\csc.exe.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\csc.rsp[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\csi.exe[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\csi.exe.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\csi.rsp[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\Microsoft.CodeAnalysis.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\Microsoft.CSharp.Core.targets[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\Microsoft.Managed.Core.targets[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\Microsoft.VisualBasic.Core.targets[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.AppContext.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Collections.Immutable.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Console.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Diagnostics.FileVersionInfo.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Diagnostics.StackTrace.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.IO.Compression.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.IO.FileSystem.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.IO.FileSystem.Primitives.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.IO.Pipes.AccessControl.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.IO.Pipes.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Reflection.Metadata.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Security.AccessControl.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Security.Claims.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Security.Cryptography.Algorithms.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Security.Cryptography.Encoding.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Security.Cryptography.Primitives.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Security.Cryptography.X509Certificates.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Security.Principal.Windows.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Text.Encoding.CodePages.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.ValueTuple.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Xml.ReaderWriter.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Xml.XmlDocument.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Xml.XPath.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\System.Xml.XPath.XDocument.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\vbc.exe[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\vbc.exe.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\vbc.rsp[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\VBCSCompiler.exe[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\roslyn\VBCSCompiler.exe.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\CapaDataAccess.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\CapaService.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\Entidades.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\EntityFramework.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\EntityFramework.SqlServer.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\Newtonsoft.Json.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\System.Net.Http.Formatting.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\System.Web.Http.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\System.Web.Http.WebHost.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\CapaBusiness.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\CapaDataAccess.pdb[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\CapaDataAccess.dll.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\CapaService.pdb[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\Entidades.pdb[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\Entidades.dll.config[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\EntityFramework.xml[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\EntityFramework.SqlServer.xml[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\Newtonsoft.Json.xml[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\System.Net.Http.Formatting.xml[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\System.Web.Http.xml[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\System.Web.Http.WebHost.xml[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\CapaBusiness.pdb[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\es\System.Net.Http.Formatting.resources.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\es\System.Web.Http.resources.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\bin\es\System.Web.Http.WebHost.resources.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\obj\Debug\Softologia.Capacitacion.TPFinalv1.0.csprojAssemblyReference.cache[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\obj\Debug\Softologia.Capacitacion.TPFinalv1.0.csproj.CoreCompileInputs.cache[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\obj\Debug\Softologia.Capacitacion.TPFinalv1.0.csproj.CopyComplete[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\obj\Debug\Softologia.Capacitacion.TP2v1.0.dll[m
+[32m+[m[32mC:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Softologia.Capacitacion.TPFinalv1.0\obj\Debug\Softologia.Capacitacion.TP2v1.0.pdb[m
+[1mdiff --git a/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TPFinalv1.0.csprojAssemblyReference.cache b/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TPFinalv1.0.csprojAssemblyReference.cache[m
+[1mindex 8c2e366..99dd340 100644[m
+Binary files a/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TPFinalv1.0.csprojAssemblyReference.cache and b/Softologia.Capacitacion.TPFinalv1.0/obj/Debug/Softologia.Capacitacion.TPFinalv1.0.csprojAssemblyReference.cache differ

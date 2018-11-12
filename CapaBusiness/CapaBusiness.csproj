@@ -52,9 +52,9 @@
       <Project>{818a0df5-19af-4dbb-810a-614d454eb320}</Project>
       <Name>CapaDataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Entidades\Entidades.csproj">
+    <ProjectReference Include="..\Entidades\Domain.csproj">
       <Project>{BD0B60DB-B777-4938-8A9D-BCB9CFB604F7}</Project>
-      <Name>Entidades</Name>
+      <Name>Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

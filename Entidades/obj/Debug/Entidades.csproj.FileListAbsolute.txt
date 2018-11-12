@@ -10,3 +10,15 @@ C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\Entidades\obj\Deb
 C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\Entidades\obj\Debug\Entidades.csproj.CopyComplete
 C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\Entidades\obj\Debug\Entidades.dll
 C:\Users\Casa\source\repos\Softologia.Capacitacion.TPFinalv1.0\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\Entidades.dll
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\EntityFramework.dll
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\EntityFramework.xml
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\obj\Debug\Entidades.dll
+C:\Users\Ultrabook\source\repos\Softologia.Capacitacion.TP2v1.0\Softologia-TP-Final\Entidades\obj\Debug\Entidades.pdb

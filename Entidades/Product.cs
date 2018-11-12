@@ -1,4 +1,4 @@
-namespace Entidades
+namespace Domain
 {
     using System;
     using System.Collections.Generic;
